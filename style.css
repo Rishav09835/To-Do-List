@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, 'Poppins';
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(125deg,#de6d6c,#dde623,#eeaf54);
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 500px;
+    background: rgb(223, 218, 214);
+    margin: 100px auto 20px;
+    padding: 40px 20px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2{
+    color: rgb(10, 153, 108);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img{
+    width: 40px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(221, 208, 208);
+    border-radius: 25px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 16px;
+}
+
+button{
+    outline: none;
+    border: none;
+    padding: 15px 40px;
+    background: rgb(21, 176, 127);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 10px 5px 10px 40px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 20%;
+    top: 6px;
+    left: 5px;
+    background-image: url(circle.png);
+    background-size: cover;
+    background-position: center;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(tick.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: rgb(12, 99, 198);
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
+    top: 5px;
+}
+
+ul li span:hover{
+    background: rgb(180, 191, 234);
+}
